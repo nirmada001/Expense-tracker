@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expentio - Add Expense</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <h1>Add Expense</h1>
+    <form action="{{ url_for('addExpense') }}" method="post">
+        {% if success_message %}
+            <div class="alert alert-sucess">
+                <i class="fas fa-check-circle"></i> {{ success_message }}
+            </div>
+        {% endif %}
+        <label>Title:</label>
+        <input type="text" name="title" required><br>
+        <label>Amount:</label>
+        <input type="number" name="amount" step="0.01" required><br>
+        <label>Date:</label>
+        <input type="date" name="date" required><br>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <a href="{{ url_for('view_expenses') }}" class="button">View your expenses</a>
+</body>
+</html>

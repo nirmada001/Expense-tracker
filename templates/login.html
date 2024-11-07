@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Expentio - Login Page</title>
+    </head>
+    <body>
+        <main class="main">
+            <h1>Login Page</h1>
+            <div class="container">
+                <h2>Login</h2>
+                <form method="post" action="">
+                    {% if error_message %}
+                        <div class="error-message">
+                            <i class="fas fa-exclamation-triangle"></i> {{ error_message }}
+                        </div>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login">
+                    </div>
+    
+                    <p>Join PENMAN <a href="{{ url_for('register') }}">Register</a></p>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
