@@ -1,0 +1,118 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Color Theme */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --accent-color: #2980B9;
+    --text-color: #333333;
+    --background-color: #F7F9FA;
+    --button-color: #3498DB;
+    --button-hover-color: #2980B9;
+    --footer-bg-color: #2C3E50;
+    --footer-text-color: #FFFFFF;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links .button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links .button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Header */
+.header {
+    background: var(--secondary-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.header .cta-button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header .cta-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer a {
+    color: var(--footer-text-color);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

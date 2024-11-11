@@ -2,11 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expentio - Your Personal Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    <h1>Hello User!! Welcome to the Expense Tracker</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand">Expentio</a>
+            <div class="nav-links">
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}" class="button">Register Now</a>
+            </div>
+        </div>
+    </nav>
 
-    <a href="{{ url_for('register') }}" class="button">Register Now</a>
+    <!-- Main Content -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Welcome to Expentio</h1>
+            <p>Your Personal Expense Tracker to help you manage and organize your finances effectively.</p>
+            <a href="{{ url_for('register') }}" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expentio. All Rights Reserved.</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
 </body>
 </html>

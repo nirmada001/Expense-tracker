@@ -3,15 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Expentio - Registration Page</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
 </head>
 <body>
+    <div class="nav-container">
+        <h1>Welcome to Expentio</h1>
+    </div>
     <main>
-        <h1>Register Here!!</h1>
         <div class="container">
-            <h2>Register</h2>
+            <h2>Create an Account</h2>
 
             {% if error_message %}
                 <div class="alert alert-danger">
@@ -20,7 +21,7 @@
             {% endif %}
 
             {% if success_message %}
-                <div class="alert alert-sucess">
+                <div class="alert alert-success">
                     <i class="fas fa-check-circle"></i> {{ success_message }}
                 </div>
             {% endif %}
@@ -32,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
