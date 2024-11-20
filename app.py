@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify, send_file
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 import firebase_admin
 from firebase_admin import credentials, firestore
 import pyrebase
@@ -122,8 +122,13 @@ def login():
 #home route
 @app.route('/home')
 def home():
-    return render_template('home.html')
-
+    if 'user' in session:
+        return render_template('home.html', username=session['user']['username'])
+    else:
+        flash("Please log in to access the home page.", "danger")
+        return redirect(url_for('login'))
+    
+#add expenses route
 @app.route('/addExpense', methods=['GET', 'POST'])
 def addExpense():
     success_message = None
